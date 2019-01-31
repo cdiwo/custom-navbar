@@ -21,6 +21,7 @@ view {
   border-radius: 16px;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .capsule > view {
