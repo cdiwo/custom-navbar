@@ -33,3 +33,11 @@ bgColor | String | - | 背景颜色，16进制颜色，如`#f1f1f1`
 showBtnBg | Boolean | true | 显示按钮背景
 back | Boolean | false | 显示“返回”按钮，默认根据`getCurrentPages().length > 1`判断是否需要显示
 home | Boolean | true | 显示“主页”按钮
+
+
+## 事件
+
+事件名 | 说明 | 返回值
+:-- | :-- | :--
+bind:backEvent | “返回”事件 | {}
+bind:homeEvent | “首页”事件 | {}
