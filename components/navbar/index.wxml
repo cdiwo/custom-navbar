@@ -1,0 +1,16 @@
+<view class="navbar {{ textStyle }} i-class"
+  style="height: {{ navigationBarHeight }}px; padding-top: {{ statusBarHeight }}px; {{ bgColor ? 'background-color: ' + bgColor : ''}}">
+  <view class="navbar-container">
+    <view wx:if="{{ back || home }}" class="capsule">
+      <view wx:if="{{ back }}" bindtap="handleBack">
+        <image src="img/left.svg"></image>
+      </view>
+      <view wx:if="{{ home }}" bindtap="handleHome">
+        <image src="img/home.svg"></image>
+      </view>
+    </view>
+    <view class="title-container">
+      <view class="title" style="{{ titleStyle }}">{{ title }}</view>
+    </view>
+  </view>
+</view>
