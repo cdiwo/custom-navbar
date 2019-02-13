@@ -30,7 +30,7 @@
 属性 | 类型 | 默认值 | 说明
 :-- | :-- | :-- | :--
 textStyle | String | white | 文本类型，有`white`和`black`可选
-title | String | Wechat | 标题
+title | String | - | 标题
 titleStyle | String | - | 标题自定义样式，css style样式，如`color: white;`
 search | String | - | 搜索栏文字，文字为空，则不显示搜索栏
 centerStyle | String | - | 标题区域自定义样式，css style样式，如`padding: 0;`
