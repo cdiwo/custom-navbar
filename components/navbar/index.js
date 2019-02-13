@@ -5,6 +5,9 @@ let statusBarHeight = wx.getSystemInfoSync().statusBarHeight,
   navigationBarHeight = statusBarHeight + 44;
 
 Component({
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  },
   externalClasses: ['i-class'],
   properties: {
     // 类型
@@ -14,11 +17,18 @@ Component({
     },
     // 标题
     title: {
-      type: String,
-      value: 'Wechat'
+      type: String
     },
-    // 标题样式
+    // 标题自定义样式
     titleStyle: {
+      type: String
+    },
+    // 搜索栏
+    search: {
+      type: String
+    },
+    // 标题区域自定义样式
+    centerStyle: {
       type: String
     },
     // 背景颜色
@@ -59,18 +69,21 @@ Component({
   },
   methods: {
     handleBack: function () {
-      this.triggerEvent('backEvent');
+      this.triggerEvent('back');
 
       if (getCurrentPages().length > 1) {
         wx.navigateBack();
       }
     },
     handleHome: function () {
-      this.triggerEvent('homeEvent');
+      this.triggerEvent('home');
 
       wx.reLaunch({
         url: '/pages/index/index'
       });
-    },    
+    },
+    handleSearch: function () {
+      this.triggerEvent('search');
+    }
   }
 })

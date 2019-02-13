@@ -42,7 +42,7 @@ view {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.title-container {
+.center-container {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -58,6 +58,13 @@ view {
   text-overflow: ellipsis;
   white-space: nowrap;
   flex: 1;
+}
+.search-input {
+  width: 100%;
+  border-radius: 64px;
+  background: #f5f5f5;
+  padding: 0 30rpx;
+  font-size: 24rpx;
 }
 
 .white {

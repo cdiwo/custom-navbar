@@ -9,8 +9,10 @@
         <image src="img/home.svg"></image>
       </view>
     </view>
-    <view class="title-container">
-      <view class="title" style="{{ titleStyle }}">{{ title }}</view>
+    <view class="center-container" style="{{ centerStyle }}">
+      <view wx:if="{{ title }}" class="title" style="{{ titleStyle }}">{{ title }}</view>
+      <input wx:elif="{{ search }}" class="search-input" placeholder="{{ search }}" disabled="disabled" catchtap="handleSearch"></input>
+      <slot wx:else name="center"></slot>
     </view>
   </view>
 </view>
