@@ -14,16 +14,20 @@
 ## 示例
 
 ```
-基本用法
-
+基本用法(默认显示home按钮)
 <navbar title="Wechat"></navbar>
 
-显示“home”按钮
+显示 “home”、“back” 按钮
 <navbar title="Wechat" home></navbar>
 
-显示“search”组件
+显示 “home” 按钮 和 “search”组件
+<navbar search="搜索文字"></navbar>
+
+显示 “home”、“back” 按钮 和 “search”组件
 <navbar search="搜索文字"></navbar>
 ```
+
+![custom-header.png](custom-header.png)
 
 ## API
 

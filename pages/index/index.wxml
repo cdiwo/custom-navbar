@@ -1,14 +1,19 @@
 <!--index.wxml-->
 <navbar title="标题" bind:home="handleHomeEvent"></navbar>
 
-<!-- back -->
+<!-- back & home -->
 <view style="position:absolute; top:80px;">
-  <navbar back=" {{ true }}" search="搜索商品" bind:search="handleSearchEvent"></navbar>
+  <navbar back title="标题" bind:home="handleHomeEvent"></navbar>
 </view>
 
 <!-- search -->
 <view style="position:absolute; top:160px;">
   <navbar centerStyle="padding-left: 60px;" search="搜索商品" bind:search="handleSearchEvent"></navbar>
+</view>
+
+<!-- search & back -->
+<view style="position:absolute; top:240px;">
+  <navbar back=" {{ true }}" search="搜索商品" bind:search="handleSearchEvent"></navbar>
 </view>
 
 <view class="container">
